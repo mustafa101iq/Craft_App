@@ -1,0 +1,65 @@
+<resources>
+    <string name="app_name">حرفة</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string-array name="province_array">
+        <item>بغداد</item>
+        <item>ديالى</item>
+        <item>الأنبار</item>
+        <item>بابل</item>
+        <item>أربيل</item>
+        <item>البصرة</item>
+        <item>دهوك</item>
+        <item>القادسية</item>
+        <item>ذي قار</item>
+        <item>السليمانية</item>
+        <item>صلاح الدين</item>
+        <item>كركوك</item>
+        <item>كربلاء</item>
+        <item>المثنى</item>
+        <item>ميسان</item>
+        <item>النجف</item>
+        <item>نينوى</item>
+        <item>واسط</item>
+
+
+    </string-array>
+    <string-array name="province_array2">
+        <item>جميع المحافظات</item>
+        <item>بغداد</item>
+        <item>ديالى</item>
+        <item>الأنبار</item>
+        <item>بابل</item>
+        <item>أربيل</item>
+        <item>البصرة</item>
+        <item>دهوك</item>
+        <item>القادسية</item>
+        <item>ذي قار</item>
+        <item>السليمانية</item>
+        <item>صلاح الدين</item>
+        <item>كركوك</item>
+        <item>كربلاء</item>
+        <item>المثنى</item>
+        <item>ميسان</item>
+        <item>النجف</item>
+        <item>نينوى</item>
+        <item>واسط</item>
+
+
+    </string-array>
+
+    <string name="about_contain">
+        وهي مبادرة انسانية غير ربحية تهدف الى خدمة المجتمع عن طريق البرمجة.تعتبر هذه المبادرة مبادرة تعليمية حقيقية ترعى المهتمين بتعلم تصميم وبرمجة
+        تطبيقات الهواتف الجوالةومواقع الانترنت وبرامج الحاسوب والشبكات والاتصالات ونظم تشغيل الحاسوب باستخدام التقنيات مفتوحة المصدر كما توفر لهم جميع الدروس التعليمية اللازمة وبشكل مجاني تماما بل الاهم من ذالك تعتمد على
+        مبدء المواطنة والمشاركة الفعالة في تأسيس وبناء المجتمع تدعو هذه المبادرة جميع الطلبة والخريجين والهواة والاساتذة الجامعيين والمهتمين في مجال البرمجة وكذالك الاختصاصات الاخرى الى التطوع والمشاركة الفعلية لأجل الارتقاء بواقع البلد,
+        حيث تعتبر فرصة عظيمة لاكتساب الخبرة والمهارة عن طريق تصميم وتنفيذ برامج وتطبيقات خدمية من شأنها خدمة المواطن وذالك ضمن مجاميع عمل نشطة وفعالة يتعامل فيها جميع الافراد كفريق واحد يتبادل الاراء
+        والخبرات ويطرح الافكار لتتم مناقشتها وتطبيقها على ارض الواقع,كما تفتح المجال لجميع المواطنين العراقيين ومن جميع الاختصاصات الى المشاركة الفعالة
+        في هذه المشاريع لرفد الفريق بالخبرات والافكار والاراء والمقتراحات التي من شئنها خدمة المجتمع بأفضل مايمكن \n
+         للانضمام او المراسلة عبر البريد الالكتروني \n\n
+        info@codeforiraq.org
+    </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

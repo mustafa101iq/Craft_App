@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ModifyInfoPage">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <Toolbar
+                android:id="@+id/toolbarAddSkill"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                android:elevation="5dp"
+                android:layoutDirection="rtl"
+                app:popupTheme="@style/AppTheme.PopupOverlay">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                </RelativeLayout>
+
+
+            </Toolbar>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/edt_full_nameM"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/cover_txt_more"
+                    android:hint="الأسم"
+                    android:maxLength="35"
+                    android:padding="12dp"
+                    android:textColor="@color/text_info_color"
+                    android:textColorHint="@color/text_color"
+                    android:textSize="@dimen/txt_info_size" />
+                <TextView
+                    android:id="@+id/txt_birth_dayM"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/cover_txt_more"
+                    android:text="تاريخ الميلاد"
+                    android:maxLength="35"
+                    android:padding="12dp"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/txt_info_size" />
+
+                <EditText
+                    android:id="@+id/edt_phone_numM"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/cover_txt_more"
+                    android:hint="رقم الهاتف"
+                    android:inputType="number"
+                    android:maxLength="20"
+                    android:padding="12dp"
+                    android:textColor="@color/text_info_color"
+                    android:textColorHint="@color/text_color"
+                    android:textSize="@dimen/txt_info_size"
+                    tools:ignore="TextFields" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="المحافظة :"
+                        android:textColor="@color/text_color"
+                        android:id="@+id/txt_provinceM"
+                        android:padding="7dp"
+                        />
+                    <Spinner
+                        android:id="@+id/spinProvinceM"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:paddingLeft="8dp"
+                        android:popupBackground="@android:color/white"
+                        android:scrollbars="none"
+                        android:spinnerMode="dropdown"
+                        android:entries="@array/province_array"
+                        android:background="@drawable/cover_txt_more"
+                        android:padding="12dp"
+                        android:theme="@style/mySpinnerItemStyle"
+                        />
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/edt_skillM"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/cover_txt_more"
+                    android:hint="المهارة"
+                    android:maxLength="30"
+                    android:padding="12dp"
+                    android:textColor="@color/text_info_color"
+                    android:textColorHint="@color/text_color"
+                    android:textSize="@dimen/txt_info_size" />
+
+                <EditText
+                    android:id="@+id/edt_priceM"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/cover_txt_more"
+                    android:hint="السعر"
+                    android:maxLength="20"
+                    android:padding="12dp"
+                    android:textColor="@color/text_info_color"
+                    android:textColorHint="@color/text_color"
+                    android:textSize="@dimen/txt_info_size"
+                    android:inputType="number"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:padding="7dp"
+                    android:text="التفاصيل :"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/txt_info_size" />
+
+                <EditText
+                    android:id="@+id/edt_more_userM"
+                    android:layout_width="match_parent"
+                    android:layout_height="132dp"
+                    android:background="@drawable/cover_txt_more"
+                    android:hint=""
+                    android:textColor="@color/text_info_color"
+                    android:textColorHint="@color/text_color"
+                    android:textSize="@dimen/txt_info_size"
+                    android:gravity="top"
+                    android:padding="5dp"
+                    />
+
+                <RelativeLayout
+                    android:id="@+id/btn_modify"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/text_color"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:text="تعديل البيانات"
+                        android:textColor="#ffffff"
+                        android:textSize="23sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/ic_send" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

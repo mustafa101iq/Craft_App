@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="الرئيسية" />
+
+    <item
+        android:id="@+id/navigation_dashboard"
+        android:icon="@mipmap/add_skill_icon"
+        android:title="اضافة مهارة" />
+
+    <item
+        android:id="@+id/navigation_notifications"
+        android:icon="@mipmap/my_skill_icon"
+        android:title="مهاراتك" />
+    <item
+        android:id="@+id/navigation_feedback"
+        android:icon="@mipmap/feedback_icon"
+        android:title="أقتراح" />
+    <item
+        android:id="@+id/navigation_about"
+        android:icon="@drawable/ic_about"
+        android:title="حول" />
+
+
+</menu>

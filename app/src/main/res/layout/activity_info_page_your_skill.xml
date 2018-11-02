@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.InfoPageYourSkill">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+
+        >
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbarHome"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                android:elevation="5dp"
+                app:popupTheme="@style/AppTheme.PopupOverlay">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/btn_user_profileys"
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:src="@mipmap/user_profile_icon"
+                        tools:ignore="ContentDescription" />
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <ImageView
+            android:layout_width="109dp"
+            android:layout_height="88dp"
+            android:layout_marginTop="15dp"
+            android:src="@mipmap/info_page_img"
+            tools:ignore="ContentDescription"
+            />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:gravity="center"
+                android:layoutDirection="rtl"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_name_personIys"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="right"
+                    android:text="ألاسم : مصطفى الحمداني"
+                    android:textColor="@color/text_info_color"
+                    android:textSize="@dimen/txt_info_size" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/text_color" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:layoutDirection="rtl"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txt_emailIys"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="الأيميل : m.alhamdany2230@gmail.com"
+                        android:textColor="@color/text_info_color"
+                        android:textSize="@dimen/txt_info_size" />
+
+                    <ImageView
+                        android:id="@+id/btn_copy_emailys"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="20dp"
+                        android:src="@drawable/ic_content_copy" />
+
+                    <ImageView
+                        android:id="@+id/btn_emailys"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/ic_email_black_24dp" />
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/text_color" />
+
+                <TextView
+                    android:id="@+id/txt_provinceIys"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="right"
+                    android:text="المحافظة : ديالى"
+                    android:textColor="@color/text_info_color"
+                    android:textSize="@dimen/txt_info_size" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/text_color" />
+
+                <TextView
+                    android:id="@+id/txt_skillIys"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="right"
+                    android:text="المهارة : مطور تطبيقات"
+                    android:textColor="@color/text_info_color"
+                    android:textSize="@dimen/txt_info_size" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/text_color" />
+
+                <TextView
+                    android:id="@+id/txt_priceIys"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="right"
+                    android:text="السعر : 200IQD"
+                    android:textColor="@color/text_info_color"
+                    android:textSize="@dimen/txt_info_size"
+                    tools:ignore="HardcodedText" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/text_color" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="التفاصيل :"
+                    android:textColor="@color/text_info_color"
+                    android:textSize="@dimen/txt_info_size"
+                    tools:ignore="HardcodedText" />
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="134dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/cover_txt_more"
+                    android:padding="7dp"
+                    tools:ignore="NestedScrolling">
+
+                    <TextView
+                        android:id="@+id/txt_detailsIys"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="مطور تطبيقات"
+                        android:textColor="@color/text_info_color"
+                        android:textSize="@dimen/txt_info_size"
+                        tools:ignore="HardcodedText" />
+                </ScrollView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn_edit"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/text_color"
+                        android:text="تعديل"
+                        android:textColor="#ffffff"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        tools:ignore="ButtonStyle,HardcodedText,NestedWeights"
+                        android:layout_weight="1"
+                        />
+
+                    <Button
+                        android:id="@+id/btn_delete"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:background="@color/text_color"
+                        android:text="حذف"
+                        android:textColor="#ffffff"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

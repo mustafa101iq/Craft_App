@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "820283789598",
+    "firebase_url": "https://craft-60858.firebaseio.com",
+    "project_id": "craft-60858",
+    "storage_bucket": "craft-60858.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:820283789598:android:02ed476a2c7bc748",
+        "android_client_info": {
+          "package_name": "org.codeforiraq.craft"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "820283789598-1ls9nbt745nhookd5n1bfadn4tfrll2a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFLZ5rzJXDsSsJmkJ4kuMESXlHuo7nhds"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

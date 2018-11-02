@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.UserProfilePage">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        >
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbarHome"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:background="?attr/colorPrimary"
+            android:elevation="5dp"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                >
+                <ImageView
+                    android:layout_width="115dp"
+                    android:layout_height="115dp"
+                    android:src="@mipmap/user_profile_img"
+                    tools:ignore="ContentDescription"
+                    android:id="@+id/btn_profile"
+                    />
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_info_color"
+            android:textSize="@dimen/txt_info_size"
+            android:text="الأسم الكامل: مصطفى الحمداني"
+            android:layout_marginTop="20dp"
+            android:id="@+id/txt_full_name"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/text_color"
+            android:layout_marginTop="10dp"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:layoutDirection="rtl"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_info_color"
+                android:textSize="@dimen/txt_info_size"
+                android:text="رقم الهاتف : 07715456704"
+
+                android:id="@+id/txt_phone_num"
+                android:layout_weight="1"
+                />
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_content_copy"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/btn_copy"
+                />
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_call"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/btn_call"
+                />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/text_color"
+            android:layout_marginTop="10dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_info_color"
+            android:textSize="@dimen/txt_info_size"
+            android:text="المحافظة : ديالى"
+            android:layout_marginTop="20dp"
+            android:id="@+id/txt_province_user"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/text_color"
+            android:layout_marginTop="10dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_info_color"
+            android:textSize="@dimen/txt_info_size"
+            android:text="المهارة : مطور تطبيقات"
+            android:layout_marginTop="20dp"
+            android:id="@+id/txt_skill"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/text_color"
+            android:layout_marginTop="10dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_info_color"
+            android:textSize="@dimen/txt_info_size"
+            android:text="تاريخ الميلاد : 27/4/1997"
+            android:layout_marginTop="20dp"
+            android:id="@+id/txt_birth_day_user"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/text_color"
+            android:layout_marginTop="10dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_info_color"
+            android:textSize="@dimen/txt_info_size"
+            android:text="التفاصيل :"
+            android:layout_marginTop="20dp"
+            />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="134dp"
+            android:layout_marginTop="10dp"
+            tools:ignore="NestedScrolling"
+            android:background="@drawable/cover_txt_more"
+            android:padding="7dp"
+            android:layout_marginBottom="10dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_info_color"
+                android:textSize="@dimen/txt_info_size"
+                android:text="مطور تطبيقات"
+                android:id="@+id/txt_details_user"
+                />
+        </ScrollView>
+
+
+    </LinearLayout>
+
+</ScrollView>
+</LinearLayout>
+</android.support.constraint.ConstraintLayout>

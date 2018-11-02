@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.InfoPage">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    >
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        >
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbarHome"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:elevation="5dp"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:src="@mipmap/user_profile_icon"
+                    tools:ignore="ContentDescription"
+                    android:id="@+id/btn_user_profile"
+                    />
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+    <ImageView
+        android:layout_width="109dp"
+        android:layout_height="88dp"
+        android:src="@mipmap/info_page_img"
+        android:layout_marginTop="15dp"
+        tools:ignore="ContentDescription"
+
+        />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_info_color"
+                android:textSize="@dimen/txt_info_size"
+                android:text="ألاسم : مصطفى الحمداني"
+                android:layout_marginTop="20dp"
+                android:id="@+id/txt_name_personI"
+                android:gravity="right"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/text_color"
+                android:layout_marginTop="10dp"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:layoutDirection="rtl"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_info_color"
+                    android:textSize="@dimen/txt_info_size"
+                    android:text="الأيميل : m.alhamdany2230@gmail.com"
+                    android:id="@+id/txt_emailI"
+                    android:gravity="right"
+                    android:layout_weight="1"
+                    />
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/ic_content_copy"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/btn_copy_email"
+                    />
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/ic_email_black_24dp"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/btn_email"
+                    />
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/text_color"
+                android:layout_marginTop="10dp"
+
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_info_color"
+                android:textSize="@dimen/txt_info_size"
+                android:text="المحافظة : ديالى"
+                android:layout_marginTop="20dp"
+                android:id="@+id/txt_provinceI"
+                android:gravity="right"
+
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/text_color"
+                android:layout_marginTop="10dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_info_color"
+                android:textSize="@dimen/txt_info_size"
+                android:text="المهارة : مطور تطبيقات"
+                android:layout_marginTop="20dp"
+                android:id="@+id/txt_skillI"
+                android:gravity="right"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/text_color"
+                android:layout_marginTop="10dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_info_color"
+                android:textSize="@dimen/txt_info_size"
+                android:text="السعر : 200IQD"
+                android:layout_marginTop="20dp"
+                android:id="@+id/txt_priceI"
+                android:gravity="right"
+                tools:ignore="HardcodedText" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/text_color"
+                android:layout_marginTop="10dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_info_color"
+                android:textSize="@dimen/txt_info_size"
+                android:text="التفاصيل :"
+                android:layout_marginTop="20dp"
+                tools:ignore="HardcodedText" />
+             <ScrollView
+                 android:layout_width="match_parent"
+                 android:layout_height="134dp"
+                 android:layout_marginTop="10dp"
+                 tools:ignore="NestedScrolling"
+                 android:background="@drawable/cover_txt_more"
+                 android:padding="7dp"
+                 android:layout_marginBottom="10dp"
+                 >
+                 <TextView
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:textColor="@color/text_info_color"
+                     android:textSize="@dimen/txt_info_size"
+                     android:text="مطور تطبيقات"
+                     android:id="@+id/txt_detailsI"
+                     android:gravity="right"
+                     />
+             </ScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_weight="1"
+    >
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="55"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:padding="5dp"
+        android:id="@+id/txt_like"
+        android:textColor="@color/text_color"
+        />
+    <Button
+        android:id="@+id/btn_like"
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+        android:background="@color/text_color"
+        android:text="أعجبني"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:ignore="ButtonStyle,HardcodedText,NestedWeights"
+        android:layout_weight="1"
+        />
+
+</LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:orientation="vertical"
+    android:gravity="left|right"
+
+    >
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="55"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:padding="5dp"
+        android:textColor="@color/text_color"
+        android:id="@+id/txt_dislike"
+        />
+    <Button
+        android:id="@+id/btn_dislike"
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/text_color"
+        android:text="لم يعجبني"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText"
+        />
+
+</LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>
+</android.support.constraint.ConstraintLayout>

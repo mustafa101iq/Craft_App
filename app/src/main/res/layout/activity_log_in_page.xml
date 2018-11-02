@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.LogInPage">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        >
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbarHome"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:background="?attr/colorPrimary"
+                android:elevation="5dp"
+                app:popupTheme="@style/AppTheme.PopupOverlay">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/btn_profile"
+                        android:layout_width="115dp"
+                        android:layout_height="115dp"
+                        android:src="@mipmap/user_profile_img"
+                        tools:ignore="ContentDescription" />
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="30dp"
+                android:layoutDirection="rtl"
+                >
+                <TextView
+                    android:layoutDirection="rtl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="*  يرجى تسجيل الدخول للانتقال الى صفحة اضافة مهارة "
+                    android:textColor="@color/text_color"
+                    android:layout_marginTop="5dp"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    android:background="@drawable/cover_txt_more"
+                    android:padding="7dp"
+                    android:layout_marginBottom="10dp"
+                    />
+
+                <EditText
+                    android:id="@+id/edt_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cover_txt_more"
+                    android:hint="الايميل"
+                    android:inputType="textEmailAddress"
+                    android:padding="12dp"
+                    android:textColorHint="@color/text_color" />
+
+                <EditText
+                    android:id="@+id/edt_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/cover_txt_more"
+                    android:hint="الباسورد"
+                    android:inputType="textPassword"
+                    android:padding="12dp"
+                    android:textColorHint="@color/text_color"
+
+                    />
+
+                <Button
+                    android:id="@+id/btn_login"
+                    android:layout_width="293dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="40dp"
+                    android:background="@color/text_color"
+                    android:text="تسجيل الدخول"
+                    android:textColor="#ffffff"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:gravity="center"
+                    android:text="او"
+                    android:textColor="@color/text_color"
+                    android:textSize="25sp" />
+
+                <com.google.android.gms.common.SignInButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/signInGoogle"
+                    >
+                </com.google.android.gms.common.SignInButton>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layoutDirection="rtl"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="لاتملك حساب ؟ "
+                        android:textColor="@color/text_color"
+                        android:textSize="16sp"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/txt_register"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="3dp"
+                        android:text="تسجيل "
+
+                        android:textColor="@color/text_color"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
