@@ -101,6 +101,7 @@ class YourSkillsFragment : Fragment() {
                 val photo_url = i.next().value.toString()
                 val price = i.next().value.toString()
                 val province = i.next().value.toString()
+                val show = i.next().value.toString()
                 val uid = i.next().value.toString()
                 val user_name = i.next().value.toString()
                 val user_skill = i.next().value.toString()
@@ -110,7 +111,7 @@ class YourSkillsFragment : Fragment() {
 
                     list_skill.add(ListSkill(user_skill, user_name, price,
                             photo_url, province,
-                            phone_number,details,birth_day,uid,email,id))
+                            phone_number,details,birth_day,uid,email,id,show))
                     list_skill.reverse()
                     recycler_view_your_skill.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
                     recycler_view_your_skill.adapter = SkillAdapter(list_skill, context,1)
@@ -126,7 +127,7 @@ class YourSkillsFragment : Fragment() {
             }
 
         } catch (e: Exception) {
-            Toast.makeText(ctx, e.message, Toast.LENGTH_SHORT).show()
+           // Toast.makeText(ctx, e.message, Toast.LENGTH_SHORT).show()
         }
 
     }

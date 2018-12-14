@@ -7,6 +7,7 @@ import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Spinner
 import android.widget.TextView
 import android.widget.Toast
@@ -33,6 +34,9 @@ class ModifyInfoPage : AppCompatActivity() {
     var birth_day=""
     lateinit var db_ref:DatabaseReference
     var mDateListener: DatePickerDialog.OnDateSetListener?=null
+    var isFromAdminPanel=0
+    lateinit var show:String
+
     lateinit var txt_province: TextView
     lateinit var spinProvince: Spinner
     lateinit var id:String
@@ -47,6 +51,8 @@ class ModifyInfoPage : AppCompatActivity() {
     lateinit var old_province:String
     lateinit var old_birth_day:String
     lateinit var old_price:String
+    lateinit var old_show:String
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_modify_info_page)
@@ -60,7 +66,8 @@ class ModifyInfoPage : AppCompatActivity() {
         details=intent.extras.getString("details")
         phone_number=intent.extras.getString("phone_number")
         birth_day=intent.extras.getString("birth_day")
-
+        isFromAdminPanel=intent.extras.getInt("isFromAdminPanel")
+        show=intent.extras.getString("show")
 
         old_name=user_name
         old_birth_day=birth_day
@@ -69,6 +76,14 @@ class ModifyInfoPage : AppCompatActivity() {
         old_price=price
         old_province=province
         old_skill=skill
+        old_show=show
+
+        if(isFromAdminPanel==1){
+            edt_show.visibility=View.VISIBLE
+            edt_show.setText(old_show)
+        }else{
+            edt_show.visibility=View.GONE
+        }
 
         edt_full_nameM.setText(old_name)
         edt_more_userM.setText(old_details)
@@ -97,6 +112,7 @@ class ModifyInfoPage : AppCompatActivity() {
             price = edt_priceM.text.toString()
             more = edt_more_userM.text.toString()
             province = spinProvinceM.selectedItem.toString()
+            show = edt_show.text.toString()
             var photo_url = ""
             if (currentUser.photoUrl == null) {
                 photo_url = "http://i.imgur.com/DvpvklR.png"
@@ -106,7 +122,8 @@ class ModifyInfoPage : AppCompatActivity() {
             db = FirebaseDatabase.getInstance()
             db_ref = db.reference
             if (user_name!=old_name || phone_number!=old_phone
-                    || price!=old_price || more!=old_details || birth_day!=old_birth_day||province!=old_province||skill!=old_skill) {
+                    || price!=old_price || more!=old_details || birth_day!=old_birth_day
+                    ||province!=old_province||skill!=old_skill||show!=old_show) {
                 val map_data = HashMap<String, String>()
                 map_data["user_name"] = user_name
                 map_data["phone_number"] = phone_number
@@ -119,11 +136,20 @@ class ModifyInfoPage : AppCompatActivity() {
                 map_data["email"] = currentUser.email!!.toString()
                 map_data["birth_day"] = birth_day
                 map_data["id"] = id
+                map_data["show"] = show
                 db_ref.child("skill_users").child(id).setValue(map_data)
                 Toast.makeText(this, "تم التعديل بنجاح", Toast.LENGTH_SHORT).show()
-             val i=Intent(this,MainActivity::class.java)
-                i.putExtra("from_add",true)
-                startActivity(i)
+                if(isFromAdminPanel==1){
+                    val i=Intent(this,AdminPanelPage::class.java)
+                    startActivity(i)
+                   finish()
+                }else{
+                    val i=Intent(this,MainActivity::class.java)
+                    i.putExtra("from_add",true)
+                    startActivity(i)
+                    finish()
+                }
+
             } else {
                 Toast.makeText(this, "يرجى تعديل احد البيانات اولا", Toast.LENGTH_SHORT).show()
             }
@@ -140,5 +166,6 @@ class ModifyInfoPage : AppCompatActivity() {
         dailog.window.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         dailog.show()
     }
+
 
 }

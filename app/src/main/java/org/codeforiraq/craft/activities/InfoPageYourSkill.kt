@@ -24,9 +24,10 @@ class InfoPageYourSkill : AppCompatActivity() {
     lateinit var phone_number: String
     lateinit var birth_day: String
     lateinit var id: String
+    lateinit var show:String
     lateinit var db: FirebaseDatabase
     lateinit var db_ref: DatabaseReference
-
+    var isFromAdminPanel:Int=0
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,7 +45,8 @@ class InfoPageYourSkill : AppCompatActivity() {
         phone_number = intent.extras.getString("phone_number")
         birth_day = intent.extras.getString("birth_day")
         id = intent.extras.getString("id")
-
+        isFromAdminPanel=intent.extras.getInt("isFromAdminPanel")
+        show=intent.extras.getString("show")
         db = FirebaseDatabase.getInstance()
         db_ref = db.reference
 
@@ -61,7 +63,10 @@ class InfoPageYourSkill : AppCompatActivity() {
             i.putExtra("phone_number", phone_number)
             i.putExtra("birth_day", birth_day)
             i.putExtra("id", id)
+            i.putExtra("isFromAdminPanel", isFromAdminPanel)
+            i.putExtra("show", show)
             startActivity(i)
+            finish()
         }
         btn_delete.setOnClickListener {
             val dialog:AlertDialog.Builder=AlertDialog.Builder(this)
@@ -72,6 +77,7 @@ class InfoPageYourSkill : AppCompatActivity() {
                 val intent = Intent(this, MainActivity::class.java)
                 intent.putExtra("from_add", true)
                 startActivity(intent)
+                finish()
             }
             dialog.setNegativeButton("لا") { dialogInterface, i ->
 

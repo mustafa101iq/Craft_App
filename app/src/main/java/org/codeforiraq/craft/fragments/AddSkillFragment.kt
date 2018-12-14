@@ -130,6 +130,7 @@ class AddSkillFragment : Fragment() {
                             map_data["email"] = currentUser.email!!.toString()
                             map_data["birth_day"] = birth_day
                             map_data["id"]=key
+                            map_data["show"]="0"
 
 //                    Toast.makeText(ctx, map_data.toString(), Toast.LENGTH_SHORT).show()
 
@@ -147,15 +148,15 @@ class AddSkillFragment : Fragment() {
                                     val i=Intent(ctx,MainActivity::class.java)
                                     i.putExtra("from_add",true)
                                     startActivity(i)
-//                                    Toast.makeText(ctx, "تم الاضافة بنجاح", Toast.LENGTH_SHORT).show()
 
                                 }
 
                             }
+
                           thread.start()
 
                         } catch (e: Exception) {
-                            Toast.makeText(ctx, e.message!!.toString(), Toast.LENGTH_SHORT).show()
+                           // Toast.makeText(ctx, e.message!!.toString(), Toast.LENGTH_SHORT).show()
                         }
                     } else {
                         Toast.makeText(ctx, "لم يتم تسجيل الدخول", Toast.LENGTH_SHORT).show()
@@ -247,22 +248,24 @@ class AddSkillFragment : Fragment() {
                 val photo_url = i.next().value.toString()
                 val price = i.next().value.toString()
                 val province = i.next().value.toString()
+                val show = i.next().value.toString()
                 val uid = i.next().value.toString()
                 val user_name = i.next().value.toString()
                 val user_skill = i.next().value.toString()
+
 
 
                 if (mAuth!!.currentUser != null && uid == mAuth!!.currentUser!!.uid) {
 
                     your_skill_list.add(ListSkill(user_skill, user_name, price,
                             photo_url, province,
-                            phone_number, details, birth_day, uid, email,id))
+                            phone_number, details, birth_day, uid, email,id,show))
                 }
 
             }
 
         } catch (e: Exception) {
-            Toast.makeText(context, e.message, Toast.LENGTH_SHORT).show()
+           // Toast.makeText(context, e.message, Toast.LENGTH_SHORT).show()
         }
 
     }

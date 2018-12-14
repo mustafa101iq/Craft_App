@@ -47,7 +47,13 @@ class SkillAdapter(var list_skill: ArrayList<ListSkill>, var context: Context?, 
                 i.putExtra("birth_day", list_skill_local.birth_day)
                 i.putExtra("id", list_skill_local.id)
                 context!!.startActivity(i)
-            } else if (viewType == 1) {
+            } else if (viewType == 1||viewType==2) {
+                var isFromAdminPanel=0
+                if (viewType==2){
+                    isFromAdminPanel=1
+                }else{
+                    isFromAdminPanel=0
+                }
                 val i = Intent(context, InfoPageYourSkill::class.java)
                 i.putExtra("user_name", list_skill_local.name_person)
                 i.putExtra("email", list_skill_local.email)
@@ -58,6 +64,9 @@ class SkillAdapter(var list_skill: ArrayList<ListSkill>, var context: Context?, 
                 i.putExtra("phone_number", list_skill_local.phone_number)
                 i.putExtra("birth_day", list_skill_local.birth_day)
                 i.putExtra("id", list_skill_local.id)
+                i.putExtra("isFromAdminPanel", isFromAdminPanel)
+                i.putExtra("show", list_skill_local.Show)
+
                 context!!.startActivity(i)
             }
         }
